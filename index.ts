@@ -14,3 +14,39 @@ let single: string  = 'hello';
 let double: string = "hello";
 let back: string = `hello`;
 
+
+const person: {
+  name: string,
+  age: number} =  {
+  name: 'jack',
+  age: 21
+}
+
+const person2: object =  {
+  name: 'jack',
+  age: 21
+}
+//console.log(person2.age);→エラー
+
+const person3 = {
+  name: {
+    first: 'jack',
+    last: 'mychel'
+  },
+  age: 21
+}
+
+// 配列
+
+const fruits: string[] =  ['Apple', 'Banana', 'Grape'];
+//fruits.push(5)→エラー
+const fruits2 =  ['Apple', 'Banana', 'Grape', 1];
+const fruits3: any[] =  ['Apple', 'Banana', 'Grape',  1];
+
+// tapple
+// かならず文字列、数字、boolean
+const book = ['business', 1500,  false];//これだと文字列、数字、booleanが入れられる配列
+const book2: [string, number, boolean] = ['business', 1500,  false];
+book2.push(1);//これはできちゃう。初期値は厳しいけど、その後はゆるい。
+console.log(book(3))// でも参照はできないので、問題ない
+
