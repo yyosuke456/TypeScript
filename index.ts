@@ -50,3 +50,21 @@ const book2: [string, number, boolean] = ['business', 1500,  false];
 book2.push(1);//これはできちゃう。初期値は厳しいけど、その後はゆるい。
 console.log(book(3))// でも参照はできないので、問題ない
 
+
+//Enum
+
+enum CoffeeSize {
+  SHORT = 'short',
+  TALL = 'tall',
+  GRANDE = 'grande',
+  VENTI = 'venti'
+}
+const coffee = {
+  hot: true,
+  size: CoffeeSize.SHORT
+}
+
+coffee.size = CoffeeSize.TALL;//CoffeeSizeしか入らない
+
+
+
