@@ -48,7 +48,7 @@ const fruits3: any[] =  ['Apple', 'Banana', 'Grape',  1];
 const book = ['business', 1500,  false];//これだと文字列、数字、booleanが入れられる配列
 const book2: [string, number, boolean] = ['business', 1500,  false];
 book2.push(1);//これはできちゃう。初期値は厳しいけど、その後はゆるい。
-console.log(book(3))// でも参照はできないので、問題ない
+//console.log(book(3))// でも参照はできないので、問題ない
 
 
 //Enum
@@ -65,6 +65,14 @@ const coffee = {
 }
 
 coffee.size = CoffeeSize.TALL;//CoffeeSizeしか入らない
+
+
+// any型
+let anything: any = true;
+anything = 'hello';
+anything = ['hello', 3, false];
+let banana = 'banana';
+banana = anything;//  入れれちゃう。any型になるとjavascriptの世界に戻ってしまう。なるべく使わない。
 
 
 
