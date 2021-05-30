@@ -74,5 +74,10 @@ anything = ['hello', 3, false];
 let banana = 'banana';
 banana = anything;//  入れれちゃう。any型になるとjavascriptの世界に戻ってしまう。なるべく使わない。
 
+// Union型 複数の型を持てる
+let unionType: number | string = 10;
+unionType = 'union';
+unionType.toUpperCase();// stringが入っているときはエラーにならない
 
+let unionTypes: (number | string)[] = [21, 'union'];
 
