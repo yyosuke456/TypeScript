@@ -81,3 +81,9 @@ unionType.toUpperCase();// stringが入っているときはエラーになら�
 
 let unionTypes: (number | string)[] = [21, 'union'];
 
+
+// literal型
+const apple: 'apple' = 'apple';// 'apple'しか代入できない
+const apple2: 0 = 0;//0しか代入できない。constだとliteralになる
+let clothSize: 'small' | 'medium' | 'learge' = 'small';// unionとliteral組合せると便利
+// enumとの違い→オブジェクトではない clothSize.SMALLとかしない。
