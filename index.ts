@@ -92,5 +92,8 @@ let clothSize: 'small' | 'medium' | 'learge' = 'small';// unionとliteral組合�
 type ClothSize = 'small' | 'medium' | 'learge' | 'small';
 let size1 : ClothSize = 'small';
 
-
+// 関数に型をつける　返却値は型推論が効く
+function myAdd(num1: number, num2: number): number {
+  return num1 + num2;
+}
 
