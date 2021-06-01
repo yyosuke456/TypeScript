@@ -87,3 +87,10 @@ const apple: 'apple' = 'apple';// 'apple'しか代入できない
 const apple2: 0 = 0;//0しか代入できない。constだとliteralになる
 let clothSize: 'small' | 'medium' | 'learge' = 'small';// unionとliteral組合せると便利
 // enumとの違い→オブジェクトではない clothSize.SMALLとかしない。
+
+// alias 型として別名をつけられる
+type ClothSize = 'small' | 'medium' | 'learge' | 'small';
+let size1 : ClothSize = 'small';
+
+
+
