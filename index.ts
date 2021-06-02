@@ -97,3 +97,8 @@ function myAdd(num1: number, num2: number): number {
   return num1 + num2;
 }
 
+// void undefinedを返す。undefinedはreturn;をつければ使えるが、使わない
+function sayHello(): void {
+  console.log('Hello');
+}
+console.log(sayHello());
