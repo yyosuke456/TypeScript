@@ -102,3 +102,15 @@ function sayHello(): void {
   console.log('Hello');
 }
 console.log(sayHello());
+
+
+// 関数型
+const anotherAdd = add;
+anotherAdd(2,3);
+
+const anotherAdd2: (n1:number, n2:number) => number = add;
+
+const anotherAdd3: (n1:number, n2:number) => number = function(num1, num2) {
+  return num1 + num2;
+}
+// 右辺、左辺どちらかに型定義があればいい
