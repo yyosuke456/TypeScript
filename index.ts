@@ -114,3 +114,14 @@ const anotherAdd3: (n1:number, n2:number) => number = function(num1, num2) {
   return num1 + num2;
 }
 // 右辺、左辺どちらかに型定義があればいい
+
+
+// callback関数
+function doubleAndHandle(num: number, cb: (num: number) => number): void {
+  const doubleNum = cb(num * 2);
+  console.log(num * 2);
+}
+
+doubleAndHandle(21, doubleNum => {
+  return doubleNum;
+})
