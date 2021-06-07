@@ -139,3 +139,10 @@ anyInput = true;
 if (typeof unknownInput === 'string') {// チェックしてから使う
 
 }
+
+//  never型 本当に何も返さない
+function error(message: string): never{
+  throw new Error(message);
+}
+// エラーとか無限ループとかで使うらしい。よくわからない。
+console.log(error('this is error'))
