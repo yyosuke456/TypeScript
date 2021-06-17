@@ -13,5 +13,7 @@ class Person {
 const quill = new Person('Quill');
 console.log(quill);
 
-const anontherQuill = new Person('Quill');
+const anontherQuill = {
+  anotherGreeting: quill.greeting()
+}
 quill.greeting();
