@@ -5,7 +5,7 @@ class Person {
   }
 
   //クラスメソッド
-  greeting(this: {name: string}) {//偽物のパラメータthis。第一引数にだけとれる。正しくthisをつたえる
+  greeting(this: Person) {//偽物のパラメータthis。第一引数にだけとれる。正しくthisをつたえる
     console.log(`hello, my name is ${this.name}`);
   }
 }
@@ -18,3 +18,5 @@ const anontherQuill = {
   anotherGreeting: quill.greeting()
 }
 quill.greeting();
+
+
