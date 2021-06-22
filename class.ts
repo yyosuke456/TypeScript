@@ -5,7 +5,7 @@ class Person {
   }
 
   //クラスメソッド
-  greeting(this: Person) {//偽物のパラメータthis。第一引数にだけとれる。正しくthisをつたえる
+  greeting(this: Person) {//thisをより厳しく制限
     console.log(`hello, my name is ${this.name}`);
   }
 }
