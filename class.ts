@@ -1,5 +1,5 @@
 class Person {
-  name: string;
+  public name: string;//何もつけないときはpublic
   private age: number;
   constructor(iniitName: string, initAge: number){
     this.age = initAge;
