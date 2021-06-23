@@ -1,6 +1,6 @@
 class Person {
   name: string;
-  age: number;
+  private age: number;
   constructor(iniitName: string, initAge: number){
     this.age = initAge;
     this.name = iniitName;
@@ -23,5 +23,6 @@ const anontherQuill = {
   anotherGreeting: quill.greeting()
 }
 quill.greeting();
-
+quill.incrementAge();
+quill.greeting();
 
