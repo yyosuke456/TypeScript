@@ -1,7 +1,6 @@
 class Person {
   readonly id: number = 22;
   constructor(public readonly name: string, private age: number){
-    this.id = 23;// constructor内ではreadonlyのものに代入できる。
   }// public, privateをつけることで初期化が省略できる。
 
   incrementAge(){
@@ -24,3 +23,13 @@ quill.greeting();
 quill.incrementAge();
 quill.greeting();
 
+class Teacher extends Person{
+  constructor(name: string, age: number, public subject: string) {
+    super(name, age);
+  }
+  greeting(this: Teacher) {//thisをより厳しく制限
+    console.log(`hello, my name is ${this.name}. I am ${this.age} years old, and I teach ${this.subject}`);
+  }
+}
+
+const teacher = new Teacher('Mike', 33);
