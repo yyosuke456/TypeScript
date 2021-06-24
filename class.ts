@@ -1,5 +1,7 @@
 class Person {
-  constructor(public name: string, private age: number){
+  readonly id: number = 22;
+  constructor(public readonly name: string, private age: number){
+    this.id = 23;// constructor内ではreadonlyのものに代入できる。
   }// public, privateをつけることで初期化が省略できる。
 
   incrementAge(){
