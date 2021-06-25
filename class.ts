@@ -27,9 +27,9 @@ class Teacher extends Person{
   constructor(name: string, age: number, public subject: string) {
     super(name, age);
   }
-  greeting(this: Teacher) {//thisをより厳しく制限
+  greeting(this) {
     console.log(`hello, my name is ${this.name}. I am ${this.age} years old, and I teach ${this.subject}`);
   }
 }
 
-const teacher = new Teacher('Mike', 33);
+const mike = new Teacher('Mike', 33, 'Math');
