@@ -1,3 +1,4 @@
+"use strict";
 var hello = 'hello';
 console.log(hello);
 // 型がわかることでドキュメントとしての側面を持つ
@@ -103,3 +104,9 @@ anyInput = true;
 // unknownは使うときanyより厳しい
 if (typeof unknownInput === 'string') { // チェックしてから使う
 }
+//  never型 本当に何も返さない
+function error(message) {
+    throw new Error(message);
+}
+// エラーとか無限ループとかで使うらしい。よくわからない。
+console.log(error('this is error'));
