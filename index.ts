@@ -146,3 +146,5 @@ function error(message: string): never{
 }
 // エラーとか無限ループとかで使うらしい。よくわからない。
 console.log(error('this is error'))
+
+console.log('hello'.toUpperCase());
