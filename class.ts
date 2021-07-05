@@ -1,6 +1,6 @@
 class Person {
   readonly id: number = 22;
-  constructor(public readonly name: string, private age: number){
+  constructor(readonly name: string, protected age: number){// protectedにすると継承先でも使える。
   }// public, privateをつけることで初期化が省略できる。
 
   incrementAge(){
@@ -25,7 +25,7 @@ quill.greeting();
 
 class Teacher extends Person{
   constructor(name: string, age: number, public subject: string) {
-    super(name, age);
+    super(name, age);// constructor使いたいならかならずsuper
   }
   greeting() {
     console.log(`hello, my name is ${this.name}. years old, and I teach ${this.subject}`);
