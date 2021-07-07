@@ -39,14 +39,31 @@ quill.incrementAge();
 quill.greeting();
 var Teacher = /** @class */ (function (_super) {
     __extends(Teacher, _super);
-    function Teacher(name, age, subject) {
+    function Teacher(name, age, _subject) {
         var _this = _super.call(this, name, age) || this;
-        _this.subject = subject;
+        _this._subject = _subject;
         return _this;
     }
+    Object.defineProperty(Teacher.prototype, "subject", {
+        get: function () {
+            if (!this._subject) {
+                throw new Error('There is no subject');
+            }
+            return 'Music';
+        },
+        set: function (value) {
+            if (!value) {
+                throw new Error('There is no subject');
+            }
+            this._subject = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     Teacher.prototype.greeting = function () {
         console.log("hello, my name is " + this.name + ". years old, and I teach " + this.subject);
     };
     return Teacher;
 }(Person));
-var mike = new Teacher('Mike', 33, 'Math');
+var mike = new Teacher('Mike', 33, '');
+console.log(mike.subject);
