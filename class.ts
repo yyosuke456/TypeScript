@@ -1,4 +1,8 @@
 class Person {
+  static species = 'Homo Sapiens';
+  static isAdult(age: number){
+    return age > 20;
+  }
   readonly id: number = 22;
   constructor(readonly name: string, protected age: number) {// protectedにすると継承先でも使える。
   }// public, privateをつけることで初期化が省略できる。

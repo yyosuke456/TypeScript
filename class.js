@@ -19,6 +19,9 @@ var Person = /** @class */ (function () {
         this.age = age;
         this.id = 22;
     } // public, privateをつけることで初期化が省略できる。
+    Person.isAdult = function (age) {
+        return age > 20;
+    };
     Person.prototype.incrementAge = function () {
         this.age += 1;
     };
@@ -26,6 +29,7 @@ var Person = /** @class */ (function () {
     Person.prototype.greeting = function () {
         console.log("hello, my name is " + this.name + ". I am " + this.age + " years old");
     };
+    Person.species = 'Homo Sapiens';
     return Person;
 }());
 var quill = new Person('Quill', 38);
