@@ -45,8 +45,8 @@ class Teacher extends Person {
   constructor(name: string, age: number, private _subject: string) {
     super(name, age);// constructor使いたいならかならずsuper
   }
-  greeting() {
-    console.log(`hello, my name is ${this.name}. years old, and I teach ${this.subject}`);
+  explainJob(){
+    console.log(`and I teach ${this.subject}`);
   }
 }
 
