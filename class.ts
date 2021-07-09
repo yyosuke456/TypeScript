@@ -1,4 +1,4 @@
-class Person {
+abstract class Person {
   static species = 'Homo Sapiens';
   static isAdult(age: number){
     return age > 20;
@@ -13,7 +13,9 @@ class Person {
   //クラスメソッド
   greeting(this: Person) {//thisをより厳しく制限
     console.log(`hello, my name is ${this.name}. I am ${this.age} years old`);
+    this.explainJob();
   }
+  abstract explainJob():void;
 }
 
 const quill = new Person('Quill', 38);
