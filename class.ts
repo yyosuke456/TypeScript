@@ -42,7 +42,7 @@ class Teacher extends Person {
     }
     this._subject = value;
   }
-  constructor(name: string, age: number, private _subject: string) {
+  private constructor(name: string, age: number, private _subject: string) {
     super(name, age);// constructor使いたいならかならずsuper
   }
   explainJob(){
@@ -50,5 +50,8 @@ class Teacher extends Person {
   }
 }
 
-const mike = new Teacher('Mike', 33, '');
+const mike = new Teacher('Mike', 33, '');//constractorにprivateがついていると、newでインスタンスを作れない。
 console.log(mike.subject);
+mike.greeting();
+
+// new Person()はabstractメソッドが無いのでできない。
