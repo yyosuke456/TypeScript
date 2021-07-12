@@ -30,6 +30,7 @@ quill.incrementAge();
 quill.greeting();
 
 class Teacher extends Person {
+  private static instance: Teacher;
   get subject(): string {
     if (!this._subject) {
       throw new Error('There is no subject');
@@ -48,9 +49,14 @@ class Teacher extends Person {
   explainJob(){
     console.log(`and I teach ${this.subject}`);
   }
+  static getInstance(){
+    if(Teacher.instance) return Teacher.instance;
+    Teacher.instance = new Teacher('Mike', 33, '');
+    return Teacher.instance;
+  }
 }
 
-const mike = new Teacher('Mike', 33, '');//constractorにprivateがついていると、newでインスタンスを作れない。
+const mike = Teacher.getInstance();//constractorにprivateがついていると、newでインスタンスを作れない。
 console.log(mike.subject);
 mike.greeting();
 
