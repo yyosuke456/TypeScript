@@ -4,10 +4,12 @@ interface Human {
   greeting(message: string): void;
 }
 
-const human: Human = {
-  name: 'Quill';
-  age: 38;
-  greeting(message: string);
+const human = {
+  name: 'Quill',
+  age: 38,
+  greeting(message: string) {
+    console.log(message)
+  }
 }
 
 let developer;
