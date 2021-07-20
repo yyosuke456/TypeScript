@@ -5,7 +5,7 @@ interface Human {
 }
 
 class Developer implements Human {
-  constructor(public name: string, public age: number, public experience: string)
+  constructor(public name: string, public age: number){};
   greeting(message: string){
     console.log(message)
   }
