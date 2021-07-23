@@ -1,4 +1,8 @@
-interface Human {
+interface Nameable{
+  name: string;
+}
+
+interface Human extends Nameable {
   readonly name: string;
   age: number;
   greeting(message: string): void;
@@ -25,3 +29,4 @@ const tmpDeveloper = {
 }
 const tmpUser: Human = tmpDeveloper;// これもエラーにならない。
 tmpDeveloper.name = 'aa';// readonlyの影響は受けない
+
