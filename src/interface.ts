@@ -9,6 +9,11 @@ addFunc = (n1: number, n2: number) => {
 
 interface Nameable{
   name: string;
+  nickName?: string;
+}
+
+const nameable : Nameable = {
+  name: 'mike',// nickNameがなくてもエラーにならない
 }
 
 interface Human extends Nameable {
