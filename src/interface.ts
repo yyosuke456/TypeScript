@@ -23,8 +23,9 @@ interface Human extends Nameable {
 }
 
 class Developer implements Human {
+  position: string = 'no position';
   constructor(public name: string, public age: number, public experience: number){};
-  greeting(message?: string){// messageなくても使える
+  greeting(message: string = 'hello'){// messageなくても使える
     if(message){
       console.log(message)
     }
