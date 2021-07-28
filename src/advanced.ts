@@ -15,3 +15,5 @@ const michel : EngineerBlogger = {
   role: 'back-end',
   follower: 100
 }
+
+type tmp = string & number;
