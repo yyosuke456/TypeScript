@@ -8,12 +8,13 @@ type Blogger = {
   follower: number;
 }
 
-type EngineerBlogger = Engineer & Blogger;
-
+// type EngineerBlogger = Engineer & Blogger;// ↓同じ
+interface EngineerBlogger extends Engineer, Blogger {}
 const michel : EngineerBlogger = {
   name: 'michel',
   role: 'back-end',
   follower: 100
 }
-
-type tmp = string & number;
+type NumberBoolean = number | boolean;
+type StringNumber = string | number;
+type Mix = NumberBoolean & StringNumber;// numberになる
