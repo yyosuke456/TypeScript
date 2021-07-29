@@ -31,4 +31,7 @@ function toUpperCase(x: string | number){
 type NomadoWorker = Engineer | Blogger;
 function describeProfile(nomadoWorker: NomadoWorker){
   console.log(nomadoWorker.name);// nameにだけアクセスできる
+  if('role' in nomadoWorker){
+    console.log(nomadoWorker.role);// roleにアクセスできる
+  }
 }
