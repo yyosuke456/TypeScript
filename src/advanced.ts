@@ -27,3 +27,8 @@ function toUpperCase(x: string | number){
     return '';
   }
 }
+
+type NomadoWorker = Engineer | Blogger;
+function describeProfile(nomadoWorker: NomadoWorker){
+  console.log(nomadoWorker.name);// nameにだけアクセスできる
+}
