@@ -18,3 +18,12 @@ const michel : EngineerBlogger = {
 type NumberBoolean = number | boolean;
 type StringNumber = string | number;
 type Mix = NumberBoolean & StringNumber;// numberになる
+
+// type guard
+function toUpperCase(x: string | number){
+  if(typeof x === 'string'){
+    return x.toUpperCase();
+  }else{
+    return '';
+  }
+}
