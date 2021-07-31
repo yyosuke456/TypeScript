@@ -34,4 +34,34 @@ function describeProfile(nomadoWorker: NomadoWorker){
   if('role' in nomadoWorker){
     console.log(nomadoWorker.role);// roleにアクセスできる
   }
+  if('follower' in nomadoWorker) {
+    console.log(nomadoWorker.follower);
+  }
 }
+
+class Dog {
+  speak(){
+    console.log('bow-bow');
+  }
+}
+
+class Bird {
+  speak() {
+    console.log('tweet-tweet');
+  }
+  fly(){
+    console.log('flutter');
+  }
+}
+
+type Pet = Dog | Bird;
+function havePet(pet: Pet) {
+  pet.speak();
+  // if('fly' in pet){
+  //   pet.fly();
+  // }
+  if(pet instanceof Bird) {
+    pet.fly();
+  }
+}
+havePet(new Bird());
