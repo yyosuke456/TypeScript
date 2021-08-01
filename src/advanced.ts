@@ -64,4 +64,4 @@ function havePet(pet: Pet) {
     pet.fly();
   }
 }
-havePet(new Bird());
+havePet({speak() {console.log('hello')}, fly() {console.log('not fly')}});// Birdのインスタンスじゃないのでspeakからflyは呼ばれない
