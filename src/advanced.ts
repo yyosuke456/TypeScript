@@ -40,12 +40,14 @@ function describeProfile(nomadoWorker: NomadoWorker){
 }
 
 class Dog {
+  kind: 'dog' = 'dog';// リテラル型でタグを付ける
   speak(){
     console.log('bow-bow');
   }
 }
 
 class Bird {
+  kind: 'bird' = 'bird';
   speak() {
     console.log('tweet-tweet');
   }
@@ -57,9 +59,10 @@ class Bird {
 type Pet = Dog | Bird;
 function havePet(pet: Pet) {
   pet.speak();
-  // if('fly' in pet){
-  //   pet.fly();
-  // }
+  switch(pet.kind){
+    case 'bird':
+      pet.fly();
+  }
   if(pet instanceof Bird) {
     pet.fly();
   }
