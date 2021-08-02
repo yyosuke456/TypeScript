@@ -1,9 +1,11 @@
 type Engineer = {
+  kind: 'engineer';
   name: string;
   role: string;
 }
 
 type Blogger = {
+  kind: 'blogger';
   name: string;
   follower: number;
 }
