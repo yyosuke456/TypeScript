@@ -1,11 +1,9 @@
 type Engineer = {
-  kind: 'engineer';
   name: string;
   role: string;
 }
 
 type Blogger = {
-  kind: 'blogger';
   name: string;
   follower: number;
 }
@@ -69,4 +67,5 @@ function havePet(pet: Pet) {
     pet.fly();
   }
 }
-havePet({speak() {console.log('hello')}, fly() {console.log('not fly')}});// Birdのインスタンスじゃないのでspeakからflyは呼ばれない
+
+const input = document.getElementById('input');// nullable
