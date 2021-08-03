@@ -68,4 +68,8 @@ function havePet(pet: Pet) {
   }
 }
 
-const input = document.getElementById('input');// nullable
+// 2通りの書き方がある
+const input = <HTMLInputElement>document.getElementById('input');// jsx使う場合はこちらは使わないほうがわかりやすい
+const input2 = document.getElementById('input') as HTMLInputElement;
+input.value = 'initial input value';
+input2.value = 'initial input value';
