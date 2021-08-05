@@ -69,7 +69,7 @@ function havePet(pet: Pet) {
 }
 
 // 2通りの書き方がある
-const input = <HTMLInputElement>document.getElementById('input');// jsx使う場合はこちらは使わないほうがわかりやすい
+const input = <HTMLInputElement>document.getElementById('input')!;// jsx使う場合はこちらは使わないほうがわかりやすい
 const input2 = document.getElementById('input') as HTMLInputElement;
 
 input.value = 'initial input value';
