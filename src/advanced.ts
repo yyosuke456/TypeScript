@@ -75,3 +75,15 @@ const input2 = document.getElementById('input') as HTMLInputElement;
 input.value = 'initial input value';
 input2.value = 'initial input value';
 (document.getElementById('input') as HTMLInputElement).value = 'initial input value';
+
+interface Designer {
+  name: string;
+  [index: string]: string;
+}
+
+const designer: Designer = {
+  name: 'Bill',
+  role: 'data',
+  fafa: 'fafa'
+}
+
