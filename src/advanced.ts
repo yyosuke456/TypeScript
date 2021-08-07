@@ -87,3 +87,4 @@ const designer: Designer = {
   fafa: 'fafa'
 }
 
+console.log(designer.notExistField);// 存在しないものを指定してもエラーにならない。
