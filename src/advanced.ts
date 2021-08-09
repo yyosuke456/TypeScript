@@ -19,14 +19,16 @@ type NumberBoolean = number | boolean;
 type StringNumber = string | number;
 type Mix = NumberBoolean & StringNumber;// numberになる
 
-// type guard
-function toUpperCase(x: string | number){
+function toUpperCase(x: string): string;// 関数のオーバーロード
+function toUpperCase(x: number): number;
+function toUpperCase(x: string | number): string | number{
   if(typeof x === 'string'){
     return x.toUpperCase();
   }else{
     return '';
   }
 }
+const upperHello = toUpperCase('Hello');
 
 type NomadoWorker = Engineer | Blogger;
 function describeProfile(nomadoWorker: NomadoWorker){
