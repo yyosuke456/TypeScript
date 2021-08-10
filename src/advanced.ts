@@ -90,3 +90,19 @@ const designer: Designer = {
 }
 
 console.log(designer.notExistField);// 存在しないものを指定してもエラーにならない。
+
+interface DownloadedData {
+  id: number;
+  user?: {
+    name?: {
+    first: string;
+    last: string;
+    }
+  }
+}
+
+const downloadedData: DownloadedData = {
+  id: 1
+}
+
+console.log(downloadedData.user?.name?.first);// undefinedの場合にもエラーを防げる。
