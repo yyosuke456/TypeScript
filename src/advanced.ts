@@ -106,3 +106,6 @@ const downloadedData: DownloadedData = {
 }
 
 console.log(downloadedData.user?.name?.first);// undefinedの場合にもエラーを防げる。
+
+const userData = downloadedData.user ?? 'no-user';// undefined, nullならno-user
+const userData2 = downloadedData.user || 'no-user';//空文字でもno-userになる。
