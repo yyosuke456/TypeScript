@@ -109,3 +109,9 @@ console.log(downloadedData.user?.name?.first);// undefinedの場合にもエラ�
 
 const userData = downloadedData.user ?? 'no-user';// undefined, nullならno-user
 const userData2 = downloadedData.user || 'no-user';//空文字でもno-userになる。
+
+type id = DownloadedData["id"];
+let target: string = 'hello';
+let source: 'hello' = 'hello';
+target =  source;
+// source = target;// 逆は不可
