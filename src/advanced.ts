@@ -115,3 +115,13 @@ let target: string = 'hello';
 let source: 'hello' = 'hello';
 target =  source;
 // source = target;// 逆は不可
+
+enum Color {
+  RED,
+  BLUE
+}
+
+let targetColor = Color.RED;
+let sourceColor = 100;
+targetColor = sourceColor;// enumにnumberは入れられる。
+sourceColor = targetColor;// numberにenumは入れられる。
