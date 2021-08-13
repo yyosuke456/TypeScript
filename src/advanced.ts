@@ -125,3 +125,8 @@ let targetColor = Color.RED;
 let sourceColor = 100;
 targetColor = sourceColor;// enumにnumberは入れられる。
 sourceColor = targetColor;// numberにenumは入れられる。
+
+let targetFunc = function(a: string, b: string){}
+let sourceFunc = function(a: string){}
+targetFunc = sourceFunc;// 引数が多い分は無視するので可
+// sourceFunc = targetFunc;// 引数が足りないのは不可
